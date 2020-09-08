@@ -1,0 +1,11 @@
+Attendance:
+-everyone
+
+Agenda:
+-Introductions
+-Divide proposal work and assign on GitHub
+-Walk through workflow
+
+Meeting Notes:
+-switching to discord
+-everyone will create their own .md doc in the ProjectProposal directory and upload that. Then Nick will put everything into one .md doc with the team reflection at the end.
