@@ -1,17 +1,19 @@
 # Environment
-One environment where users would expect security functionality from ElasticSearch is in an enterprise environment. If a company were using ElasticSearch to store company assets they would want some level of confidence that those assets are safe. The level of confidence they would require would be directly proportional to the value of the company asset as well as the consequences of losing that asset. A company would want to be able to control what users have access to that asset as well as what each user is able to do with that asset (create, read, update, delete).
+One hypothetical environment where users would expect security functionality from ElasticSearch is in an enterprise environment, specifically a bank. A bank could use ElasticSearch to support an internal system that allows users to search for and view customers' account information. The system would need to support fuzzy/partial search functionality where users can put in part of a customer's name or some sort of internal customer ID used by the bank. The system would also need to be able to search across any number of other fields related to a customer that a user might have. The system would need to be able to search across millions of customer records in near real time. This is a perfect use case for ElasticSearch.
 
-A company might want to store an asset in ElasticSearch that gives them an edge over their competitors in their given market. This asset could be a large dataset that they need to be able to query very quickly and efficiently in order to support a consuming system. The company would want a high level of confidence that this asset is safe from malicious attackers who might want to gain access to this asset in order to sell it on the black market for profit. The company would want to be able to configure controls over who has access to read or update this asset to prevent this.
+Given that there would be personally identifiable information (PII) for customers stored in the ElasticSearch indices the business would want a high level of confidence that this information is safe. The business would want to know that only authorized users of the system would have access to this sensitive customer data. Failure to secure the customer assets in this system could result in a data breach that would cost the company their reputation as a reliable and safe place for customers to give their confidential information to.
+
+The business would also want a high level of confidence that the data stored in ElasticSearch is safe from corruption in the event of a hardware or software failure. Given this requirement the implementers of this system might decide to use multiple nodes inside one ElasticSearch cluster in order to provide redundancy and resiliance to hardware or software failures.
 
 # Threats
-- Unauthorized access to company assets in ElasticSearch index
-    - A malicious (or non-malicious) user might gain access to sensitive company assets stored in the index. The consequences of that unauthorized access might be severe depending on the data stored in the index.
-- A malicious user might attempt to destroy or make unusable an ElasticSearch index.
-    - The consequences of asset loss from the index might be severe depending on the data stored in the index.
-- A malicious user might try to modify or update an ElasticSearch index in order to cause unintended behavior in a consuming system.
-    - A malicious user with knowledge of consuming systems might try to update or modify an ElasticSearch index in order to cause specific behaviour in the consuming system.
+- Unauthorized access to customer PII in ElasticSearch
+    - A malicious (or non-malicious) user might gain access to customer PII stored in the index. The consequences of that unauthorized access would be severe because it can result in a loss of trust between the customer and the bank.
+- A malicious user might attempt to destroy or make unusable the ElasticSearch data.
+    - The consequences of this informational loss could be severe if there are no other backups of that data.
+- A malicious user might try to modify or update an ElasticSearch index in order to cause unintended behavior in the system.
+    - A malicious user with knowledge of the system might try to update or modify an ElasticSearch index in order to cause specific behaviour in the system.
 - Unintentional data loss or corruption
-    - Data could become corrupt or unusable during normal operation of ElasticSearch.
+    - Data could become corrupt or unusable during normal operation of ElasticSearch due to a severe hardware or software failure.
 
 # Security Features
 - User authentication
