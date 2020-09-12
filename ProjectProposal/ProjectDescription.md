@@ -18,7 +18,7 @@ Elasticsearch works by taking raw data from different sources and parsing it to 
 Elasticsearch can also be used in tandem with a separate group of applications in a package called Elastic Stack, which is a combination of Elasticsearch, Kibana, Beats, and Logtash. This allows for storing, formatting, searching, analyzing, and visualizing almost any data.
 
 ## Popularity
-Elasticsearch seems to have gained mild popularity, as reportedly Uber is one large company that uses it. Other reported companies are Udemy, Shopify, Slack, etc.
+Elasticsearch seems to have gained significant popularity, as reportedly Uber is one large company that uses it. Other reported companies are Udemy, Shopify, Slack, etc.
 
 ## Languages Used
 The languages supported by Elasticsearch are Java, JavaScript, Go, .NET, PHP, Perl, Python, and Ruby. 
