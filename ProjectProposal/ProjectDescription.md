@@ -5,7 +5,7 @@ Elasticsearch is an open-source project that functions as a search engine that a
 
 The backend componenents of Elasticsearch is made up of nodes, clusters, indexes, document, shards, and replicas. A node represents a single server and is a unit of a cluster, it stores data and has a universal identifier. Clusters allow searching and indexing. 
 
-Documents are the basic units that are indexed in elastic search, and are collected in an index. Indexes can also be divided into multiple shards, each acting as their own index, this also allows for multiple copies of the same document.
+Documents are the basic units that are indexed in Elasticsearch, and are collected in an index. Indexes can also be divided into multiple shards, each acting as their own index, this also allows for multiple copies of the same document.
 
 ## Contributors
 Anyone can contribute to Elasticsearch, and the project is managed by Elastic. There are 1,517 contributers at this moment, and there are daily commits.
