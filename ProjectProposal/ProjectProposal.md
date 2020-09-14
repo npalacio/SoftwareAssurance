@@ -193,9 +193,16 @@ Release | Security
 Our project board can be found [here](https://github.com/npalacio/SoftwareAssurance/projects/1).
 
 # Team Reflection
+## Our Workflow
+Our workflow for getting this proposal done included leveraging GitHub Pull Requests as well as a GitHub project board. We followed a [feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow) in our repository where members of our team would create a new branch off of our `master` branch, do their work in that branch and then when they were done they would create a Pull Request where other members of the team would review their work and provide feedback before it was merged into master and considered 'done'. The team member would use the GitHub board to track the work they were doing as well as its current status (to do, doing, done).
+
+We are also using Discord for our team's group chat.
+
 ## What Went Well
-- We found success with the way we setup our repository in order to ensure collaboration and review of everyone's work. Specifically, we made `master` our main branch and protected it so that we had to create Pull Requests in order to merge our work into `master`. We had some great collaboration and review in the PR's that we all submitted.
+- We found success following the feature branch workflow we setup. We had some great collaboration and review in the PR's that we all submitted.
 - Everyone on our team contributed. Everyone has been very responsive and engaged on our team which has made things run pretty smoothly.
 
 ## What Could Have Gone Better
-- We struggled to think of anything for this category but we will put in here that we would like to try to turn the assignment in sooner than the day it is due next time. We were blocked on starting our work as a team until Tuesday of last week because we needed to meet and split up work. We have talked about looking at splitting up work using our group chat in Discord so that we do not have to wait for our synchonous meeting to get started next time.
+- We would like to try to turn the assignment in sooner than the day it is due next time. We were blocked on starting our work as a team until Tuesday of last week because we needed to meet and split up work. We have talked about looking at splitting up work using our group chat so that we do not have to wait for our synchonous meeting to get started next time.
+- GitHub was new to some of our teammates so there was a bit of a learning curve there but those teammates feel more comfortable now and do not think it should be a problem going forward.
+- It was a little unclear when we made Pull Requests who exactly was in charge of reviewing them as well as completing them once they were approved. In our next team meeting we want to formalize this process so it is clear to everyone who should be reviewing a PR as well as whose responsibility it is to complete/merge the PR once it is approved.
