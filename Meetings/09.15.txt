@@ -1,5 +1,8 @@
 Attendance:
--everyone but Ryan
+-Nick
+-Austin
+-Joseph
+-Adrian
 
 Agenda:
 Formalize PR process and responsibilities
