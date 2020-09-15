@@ -1,0 +1,8 @@
+Attendance:
+
+
+Agenda:
+Formalize PR process and responsibilities
+Review GitHub board
+
+Meeting Notes:
