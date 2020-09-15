@@ -1,8 +1,19 @@
 Attendance:
-
+-everyone but Ryan
 
 Agenda:
 Formalize PR process and responsibilities
 Review GitHub board
 
 Meeting Notes:
+-PR process
+    -person about to do work should checkout the master branch and pull
+    -then create your feature branch
+    -do work on a feature branch, commit and push up
+    -create your PR
+    -message the group in Discord asking for a PR Review
+    -make any necessary changes from PR Review
+    -1 reviewer would approve
+        -unless person who submitted PR requests 2 reviewers OR first person to review asks for another set of eyes
+        -second reviewer would be responsible for approving and completing PR
+    -reviewer should complete PR, merge in changes and delete feature branch
