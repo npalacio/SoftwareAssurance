@@ -1,0 +1,6 @@
+Agenda:
+-figure out GitHub setup
+    -use of issues/boards
+-break down assignment into tasks
+
+Notes:
