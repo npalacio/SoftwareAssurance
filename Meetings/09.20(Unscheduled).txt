@@ -2,5 +2,34 @@ Agenda:
 -figure out GitHub setup
     -use of issues/boards
 -break down assignment into tasks
+-look at fleshing out our scenario
 
 Notes:
+-Github setup
+    -tasks will be broken out into issues, issues can be on our board as tasks and assigned to people and referenced in commits/PRs
+-proposed adding to our scenario
+    -it is a web app for customer support at the bank
+    -they take phone calls from customers asking about their account information, need to be able to quickly look up information
+    -customers also wish to update their account information via customer support employee
+    -only a subset of employees have permissions to update account information
+-brainstorm proposed system interactions
+    -employee needs to login to web application
+        -hacker (identity thief) might impersonate employee in order to login by sending them a phishing email in order to steal their credentials
+            -could implement 2FA
+        -hacker (identity thief) might impersonate employee in order to login by brute forcing their credentials
+            -could implement failed login policy to limit # of failed login attempts
+        -hacker can be anyone just trying to steal someone's bank information to get their money
+    -employee needs to view a customer's account information
+        -hacker (identity thief) might call in and impersonate a customer in order to steal the account information
+            -employee asks customer for some piece of information in order to verify their identity
+        -hacker (identity thief) might eavesdrop on the network in order to listen to communication between Elasticsearch nodes and steal a customer's account information
+            -Elasticsearch implements TLS communcation between nodes in cluster
+    -employee needs to updating a customer's account information
+        -hacker might call in and impersonate a customer in order to update their account information to falsify the information
+        -disgruntled customer support employee might use their credentials to login and update a customer's account information to falsify the information
+            -Elasticsearch implements security logging so there is traceability to see who is using the system
+            -Elasticsearch implements role based access control so that only users with elevated permissions can update a customer's account information
+    -employee needs to create a new bank account for a customer
+    -employee needs to delete/cancel an account for a customer
+    -employee needs to transfer funds for a customer
+-ended meeting after creating and assigning 2 issues in Github
