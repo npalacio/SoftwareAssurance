@@ -1,44 +1,34 @@
-Installation
+**Installation**
 
-When it comes to installation, it appears that Elasticsearch is a cross-platform solution that can be implemented on a variety of hardware or on their hosted Elasticsearch Service on Elastic Cloud. It is also available on AWS and GCP. The documentions provide a variety of package formats such as tar.gz for for Linux and MacOS, .zip archive for Windows, and several particular linux distribution packages. In addition it is available for Docker and Homebrew for MacOS.
+When it comes to installation, it appears that Elasticsearch is a cross-platform solution that can be implemented on a variety of hardware or on their hosted Elasticsearch Service on Elastic Cloud. It is also available on AWS and GCP. The documentation provides a variety of package formats such as tar.gz for for Linux and MacOS, .zip archive for Windows, and several particular linux distribution packages. In addition it is available for Docker and Homebrew for MacOS.
 
-Configuration
+**Configuration**
 
 Configuration management tools for particularly large deployments include Puppet, Chef, and Ansible.
 
 While Elasticsearch ships with good defaults, the settings can also be changed on a running cluster with the Cluster update settings API. Config files should contain settings that are node-specific since Elasticsearch is a node based tool. Elasticsearch has three configuration files located in the config directory:
 
- elasticsearch.yml
+elasticsearch.yml
 
- jvm.options
+jvm.options
 
- log4j2.properties
+log4j2.properties
 
-Configuration format is YAML and specifies a number of environment variables, cluster and node setting types. Other critical configuration settings which must be configured
+Configuration format is YAML and specifies a number of environment variables, cluster and node setting types. Other critical configuration settings which must be configured prior to production include path settings, network host, discovery settings, heap size, heap dump path, GC logging and Temp directory.
 
-prior to production include path settings, network host, discovery settings, heap size, heap dump path, GC logging and Temp directory.
-
-Security
+**Security**
 
 By default, Elasticsearch security features are disabled under basic and trial licenses. There is a four step process to enable them which go as follows:
 
--   Stop Kibana
-
--   The way that you do this depends on how Elasticsearch was installed. If the installation was from an archive distribution you need only enter Ctrl-C on the command line.
-
--   Stop Elasticsearch
-
--   Just like with Kibana it'll depend on how it was installed.
-
--   Add the xpack.security.enabled settings to the ES_PATH_CONF/elasticsearch.yml file
-
--   This is a key step that enables the built in security libraries to take effect.
-
--   Enable single-node discovery in the ES_PATH_CONF/elasticsearch.yml file
-
--   Only if you're gonna use a single node.
-
--   Otherwise for multiple nodes you enable Elasticsearch security features on every node in the cluster and configure Transport Security Layer (TSL) for internode-communication.
+- Stop Kibana
+  - The way that you do this depends on how Elasticsearch was installed. If the installation was from an archive distribution you need only enter Ctrl-C on the command line.
+- Stop Elasticsearch
+  - Just like with Kibana it&#39;ll depend on how it was installed.
+- Add the xpack.security.enabled settings to the ES\_PATH\_CONF/elasticsearch.yml file
+  - This is a key step that enables the built in security libraries to take effect.
+- Enable single-node discovery in the ES\_PATH\_CONF/elasticsearch.yml file
+  - Only if you&#39;re gonna use a single node.
+  - Otherwise for multiple nodes you enable Elasticsearch security features on every node in the cluster and configure Transport Security Layer (TSL) for internode-communication.
 
 What these basic security features do is enable basic authentication wherein to communicate with the cluster, you must specify a username and password.
 
