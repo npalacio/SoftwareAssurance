@@ -1,5 +1,5 @@
 # Use Case #3
-[Use Case 3](./Images/UseCase3.png)
+![Use Case 3](./Images/UseCase3.png)
 **Use Case:** Accessibility During Business Hours
 **Description:** Bank employees require prompt responses from the system during business hours to perform requested actions. Requests must be serviced promptly.
 **Misuse Case:** An industrial sabotuer working for a competitor is likely to attempt a Denial-of-Service attack during peak business hours to thwart regular business.
