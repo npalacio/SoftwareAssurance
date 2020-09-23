@@ -7,8 +7,8 @@
 
 **Misuse Case:** An industrial sabotuer working for a competitor is likely to attempt a Denial-of-Service attack during peak business hours to thwart regular business.
 
-**Sequrity Requirements:**
+**Security Requirements:**
  - Use Elasticsearch [IP Filtering](https://www.elastic.co/guide/en/elasticsearch/reference/current/ip-filtering.html) to prevent external requests (that are likley part of a probing or DoS attempt)
  - Use Elasticsearch [Rate Limiting](https://www.elastic.co/guide/en/cloud/current/ec-api-rate-limiting.html) to further mitigate DoS attempts including those originating from a compromised internal machine.
  
- **Assessment**: Elasticsearch provides the necessary features to ensure accessibility to resources especially during required times.
+ **Assessment:** Elasticsearch provides the necessary features to ensure accessibility to resources especially during required times.
