@@ -1,0 +1,50 @@
+Attendance:
+-Adrian
+-Joseph
+-Austin
+-Ryan
+-Nick
+
+Agenda:
+-review current use case diagram
+-split up work, create issues, add to board
+
+Notes:
+-is authenticating a use case? We think so
+    -would be included in another interaction as well
+-use cases should be about Elasticsearch
+-interactions with our system of interest
+    -authenticating/logging in
+    -logging
+        -transactional logging - this would be a feature that we added using ES
+    -view account information
+    -requires timely results from portal
+    -updating account information
+-misuse cases
+    -page 1 (Adrian)
+        -IP address filtering prevents hacker using phished password
+        -network eavesdropping as misuse case
+            -encryption
+        -brute force
+            -IP filtering prevents
+            -does ES have login attempt limits?
+    -page 2(Nick)
+        -network eavesdropping as misuse case
+            -encryption
+        -malicious employee trying to view/steal information
+            -role based access control
+        -does ES have limit on active viewers of doc? Could we build this?
+        -logging could prevent/detect an employee from accessing this when they shouldnt
+    -page 3 (Joseph)
+        -is there a rate limit in ES? Could prevent DDoS
+    -page 4 (Ryan)
+        -like what we have there
+    -page 5 (Austin)
+        -misuse case: adding fake logs
+            -IP filtering as countermeasure
+            -our system could look in ES for both sides of transaction (withdraw/deposit)
+-github plan
+    -issue per page/diagram
+    -create separate MD for each diagram
+    -Nick will put reflection together reflection
+-joseph is going to document how to do work and tag github issues
