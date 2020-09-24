@@ -1,6 +1,5 @@
-Use Case #5
-
-![Use Case 3](SSERequirements/Images/UseCase5.png)
+#Use Case #5
+![Use Case 5](./Images/UseCase5.png)
 
 **Use Case:** Transactional Log of Transaction History
 
