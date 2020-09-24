@@ -1,4 +1,5 @@
 Use Case #5
+[Use Case 3](./Images/Use Case 5.png)
 
 **Use Case:** Transactional Log of Transaction History
 
