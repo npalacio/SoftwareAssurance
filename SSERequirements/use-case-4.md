@@ -1,5 +1,5 @@
 #Use Case #4
-![Use Case 4](./Images/UseCase4.png)
+![Use Case 4](./Images/UseCase4v2.png)
 
 **Use Case:** Bank Employee updating customer's account info.
 
