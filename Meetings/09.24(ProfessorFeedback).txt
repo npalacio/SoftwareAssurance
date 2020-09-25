@@ -1,0 +1,11 @@
+5 interactions:
+    1. authentication
+        -business context is accessing the system
+    2. fetching document
+        -business context is needing to view a customer's account information
+    3. Requires Accessibility During Business Hours
+        -business context is accessing the system
+    4. Updating document
+        -business context is needing to Update Account Info for a customer
+    5. Transactional log history
+        -business context is needing to pull up report of transaction history for an account
