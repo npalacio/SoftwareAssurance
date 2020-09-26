@@ -37,7 +37,7 @@
 
 **Description:** The bank employee must be able to change information on a customer's account, this info could be personal verifying information of the customer like a name or address, and this also includes financial transactions such as depositing or withdrawing money.
 
-**Misuse Case:** The bad actor in this misuse case is a new hire with malign plans. The new hire could attempt to set the account owner to themself, allowing them access to the money in the account. 
+**Misuse Case:** The bad actor in this misuse case is a new hire with malicious plans. The new hire could attempt to set the account owner to themself, allowing them access to the money in the account. 
 
 This can be detected through Audit Logging, or prevented by requiring higher level employee access to change the account. The bad actor then decides to wait for this higher level access privilege, but can again be detected/mitigated through audit logging actions of insiders to reduce insider threats.
 
