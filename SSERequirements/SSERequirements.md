@@ -66,18 +66,19 @@ This can be detected through Audit Logging, or prevented by requiring higher lev
 **Assessment:** Elasticsearch provides both features that would detect, mitigate, and prevent insider bad actors from having access to tools that would harm customer accounts.
 
 # Use Case 5
-![Use Case 5](./Images/UseCase5.png)
+![Use Case 5](./Images/UseCase5v3.png)
 
-**Use Case:** Transactional Log of Transaction History
+**Use Case:** A bank employee performs an audit of the transactional log for a customers account.
 
-**Description:** The use case is for a log of all transactions historically that happen in the banks system. This log would include all deposits, withdrawals, transfers, etc. This use case would use ElasticSearch for both sides of the transactions. The use case includes IP filtering as a countermeasure to all tampering with logs. In addition, another use case would be encrypted logs with no ability to remove log entries. 
+**Description:** The use case is for an employee of the bank to go into the transaction log to view all the activity on a certain account that happened in the bank's system. This log would include all deposits, withdrawals, transfers, etc. This use case would use Elasticsearch for both sides of the transactions as well as pulling the log information using an Elasticsearch index. The use case includes IP filtering as a countermeasure to all tampering with logs. In addition, another use case would be encrypted logs with no ability to remove log entries. 
 
-**Misuse Case:** The misuse cases that would threaten the transactional log would be a hacker deleting the log of transactions, and/or inserting in fake log records.
+**Misuse Case:** The misuse cases that would threaten the transactional log would be a money thief deleting the log of transactions, and/or inserting in fake log records. Another attack would be the money thief spoofing their IP address to appear as a trusted user.
 
 **Security Requirements:** 
 - Use Elasticsearch [IP Filtering](https://www.elastic.co/guide/en/elasticsearch/reference/current/ip-filtering.html) as a counter measure to all tampering with logs.
 - Use Elasticsearch [Log Monitoring](https://www.elastic.co/log-monitoring) to monitor all withdraw and deposit transactions.
 - Use Elasticsearch [Encrypting Communications](https://www.elastic.co/guide/en/elasticsearch/reference/current/configuring-tls.html#:~:text=Elastic%20Stack%20security%20features%20enable,in%20plain%20text%20including%20passwords.) to encrypt traffic to and from the Elasticsearch clusters.
+- Use Elasticsearch [User Authentication](https://www.elastic.co/guide/en/elasticsearch/reference/current/setting-up-authentication.html) to try to prevent IP spoofing.
 
 **Assessment:** Elasticsearch provides the necessary features to ensure secure logging of all transactions in the system.
 
