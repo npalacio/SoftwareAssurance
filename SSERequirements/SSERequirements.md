@@ -70,9 +70,9 @@ This can be detected through Audit Logging, or prevented by requiring higher lev
 
 **Use Case:** A bank employee performs an audit of the transactional log for a customers account.
 
-**Description:** The use case is for an employee of the bank to go into the transaction log all the activity on a certain account that happened in the banks system. This log would include all deposits, withdrawals, transfers, etc. This use case would use ElasticSearch for both sides of the transactions as well as pulling the log information using an ElasticSearch index. The use case includes IP filtering as a countermeasure to all tampering with logs. In addition, another use case would be encrypted logs with no ability to remove log entries. 
+**Description:** The use case is for an employee of the bank to go into the transaction log to view all the activity on a certain account that happened in the bank's system. This log would include all deposits, withdrawals, transfers, etc. This use case would use Elasticsearch for both sides of the transactions as well as pulling the log information using an Elasticsearch index. The use case includes IP filtering as a countermeasure to all tampering with logs. In addition, another use case would be encrypted logs with no ability to remove log entries. 
 
-**Misuse Case:** The misuse cases that would threaten the transactional log would be a money thief deleting the log of transactions, and/or inserting in fake log records. Another attack would be the money theif spoofing their IP address to appear as a trusted user.
+**Misuse Case:** The misuse cases that would threaten the transactional log would be a money thief deleting the log of transactions, and/or inserting in fake log records. Another attack would be the money thief spoofing their IP address to appear as a trusted user.
 
 **Security Requirements:** 
 - Use Elasticsearch [IP Filtering](https://www.elastic.co/guide/en/elasticsearch/reference/current/ip-filtering.html) as a counter measure to all tampering with logs.
