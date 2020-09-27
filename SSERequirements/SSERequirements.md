@@ -115,3 +115,12 @@ By default, Elasticsearch security features are disabled under basic and trial l
 What these basic security features do is enable basic authentication wherein to communicate with the cluster, you must specify a username and password.
 
 Other security configuration options available to secure a cluster include enabling audit logging, encrypting communications, restricting connection with IP filtering, creating users, assigning roles, adding user information in Logstash, and viewing system metrics.
+
+# Team Reflection
+- What went well
+    - Teamwork: We all feel like everyone contributed and we did a good job collaborating and reviewing each other's work.
+- What could have gone better
+    - Understanding the assignment: We had some trouble understanding exactly what we were supposed to do for the assignment. Specifically we would have liked more clarity with respect to how many back and forths we needed for the use cases
+because we were spending too much time on any one single use case thinking we needed to keep coming up with more back and forths.
+- What we want to change going forward
+    - We want to try and review the assignment as a team before starting any work on it so that we have a chance to ask questions about it sooner in the process.
