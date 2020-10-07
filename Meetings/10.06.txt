@@ -1,0 +1,63 @@
+Attendance:
+-Nick
+-Joseph
+-Ryan
+-Adrian
+-Austin
+
+Agenda:
+-discuss our 5 top level claims
+
+Notes:
+-claim ideas: transactional and security logging, role based access control, node replication
+-top level claims
+    -'Elasticsearch's authentication feature minimizes the threat of unauthorized access'
+        -Entity: Elasticsearch
+        -Critical High Risk Property: It's vulnerability to unauthorized access
+        -Value for Property: Minimized
+        -Argument
+            -unless a password is stolen
+                -talk about 2FA
+    -'The web portal minimizes information disclosed during communication'
+        -Entity: The web portal
+        -Critical High Risk Property: The amount of information disclosed during communication
+        -Value for Property: Minimized
+        -Argument
+            -unless data is not encrypted
+    -'Elasticsearch's audit/security logging feature acceptably deters insider threats'
+        -Entity: ES Audit logging
+        -Property: If it deters inside threats
+        -Value for Property: Acceptably
+    -'ES's role based access control feature minimizes insider threats'
+        -Entity: ES Role Based Access control feature
+        -Property: Its vulnerability to insider threats
+        -Value for Property: Minimized
+    -'The web portal does not disclose unnecessary account information'
+        -Entity: Web Portal
+        -Property: If it displays unnecessary information to a user
+        -Value: No
+        -Argument: would not need to see full social security of customer in most cases
+
+    -'Elasticsearch has acceptable availability/uptime'
+        -Entity: The web portal
+        -Critical High Risk Property: Its availability
+        -Value for Property: Acceptable
+        -Argument
+            -unless there is a DDoS attack
+                -talk about IP filtering, rate limit api
+
+
+    -'Elasticsearch does not allow unauthorized users to update data'
+        -Entity: Elasticsearch
+        -Critical High Risk Property: Who is allowed to update data in an index
+        -Value for Property: authorized users (those with permissions)
+        -Argument
+            -
+    -'The Elasticsearch cluster minimizes the possibility of data loss'
+        -Entity: Elasticsearch cluster
+        -Critical High Risk Property: How much data loss is possible
+        -Value for Property: A minimal amount
+        -Argument
+            -unless a server is corrupted
+                -talk about nodes and replication
+-Nick sent the top 5 to professor on canvas for feedback
