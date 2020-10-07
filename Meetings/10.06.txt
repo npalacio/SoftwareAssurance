@@ -60,4 +60,4 @@ Notes:
         -Argument
             -unless a server is corrupted
                 -talk about nodes and replication
--Nick sent these to professor on canvas for feedback
+-Nick sent the top 5 to professor on canvas for feedback
