@@ -1,7 +1,7 @@
 # Assurance Case 1
 **Assurance Case:** Elasticsearch's authentication feature minimizes the threat of unauthorized access.
 
-![Assurance Case 4](./Images/Claim1.png)  
+![Assurance Case 1](./Images/Claim1.png)  
 
 **Assessment:**
 | Evidence  | Description          | Availability  |
