@@ -6,7 +6,7 @@
 **Assessment:**
 | Evidence  | Description          | Availability  |
 | --------- | -------------------- | ------------ |
-| *E1* - Elasticsearch IP Filtering | Required to prove C2 - Documentation needed to prove Elasticsearch can be configured to filter out requests based on IP Address | **Pass** - [IP Filtering](https://www.elastic.co/guide/en/elasticsearch/reference/current/ip-filtering.html) can be configured |
+| *E1* - Elasticsearch IP Filtering | Required to prove C2 - Documentation needed to prove Elasticsearch can be configured to filter out requests based on IP Address | **PASS** - [IP Filtering](https://www.elastic.co/guide/en/elasticsearch/reference/current/ip-filtering.html) can be configured |
 | *E2* - Elasticsearch 2 Factor Authentication | Required to prove C3 - Documentation needed to prove Elasticsearch can be configured to enable 2 Factor Authentication | **PASS** - [2FA](https://www.elastic.co/guide/en/cloud/current/ec-account-user-settings.html#ec-account-security-mfa) can be configured |
 | *E3* - Elasticsearch Request Authentication | Required to prove C4 - Documentation needed to prove Elasticsearch authenticates all requests coming in | **PASS** - [Request Authentication](https://www.elastic.co/guide/en/elasticsearch/reference/current/setting-up-authentication.html) happens for all requests |
 
@@ -57,7 +57,7 @@
 **Assessment:**
 | Evidence  | Description          | Availability  |
 | --------- | -------------------- | ------------ |
-| *E1* - Elasticsearch restore snapshot API procedures | Required to prove C4 - Documentation needed to prove Elasticsearch restore snapshot API can restore snapshot of a cluster.  | **Pass** - [Restore a Snapshot](https://www.elastic.co/guide/en/elasticsearch/reference/current/snapshots-restore-snapshot.html) |
+| *E1* - Elasticsearch restore snapshot API procedures | Required to prove C4 - Documentation needed to prove Elasticsearch restore snapshot API can restore snapshot of a cluster.  | **PASS** - [Restore a Snapshot](https://www.elastic.co/guide/en/elasticsearch/reference/current/snapshots-restore-snapshot.html) |
 | *E2* - Logs of system activity | Required to prove C5 - Documentation needed to prove Elasticsearch logs all activity happening on the system  | **PASS** - [Logs Monitoring](https://www.elastic.co/guide/en/logs/guide/7.9/logs-overview.html) |
 
 # Team Reflection
