@@ -20,7 +20,7 @@
 
 | Evidence |  Description | Availability | 
 |---|---|---|
-| *E1* - Elasticsearch SSL/TLS encryption  | Required to prove C2 - Documentation needed to prove Elasticsearch can be configured to encrypt traffic to, from, and within a cluster | **PASS** - [Encryption] (https://www.elastic.co/guide/en/elasticsearch/reference/current/ssl-tls.html) can be configured |
+| *E1* - Elasticsearch SSL/TLS encryption  | Required to prove C2 - Documentation needed to prove Elasticsearch can be configured to encrypt traffic to, from, and within a cluster | **PASS** - [Encryption](https://www.elastic.co/guide/en/elasticsearch/reference/current/ssl-tls.html) can be configured |
 | *E2* - Elasticsearch Requires SSL certificate to authenticate new nodes | Required to prove C3 - Documentation needed to prove Elasticsearch can be configured to require SSL certificates for new nodes | **PASS** - [New node SSL Certificate Authentication](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/configuring-tls.html#node-certificates) can be configured |
 
 # Assurance Case 3
@@ -68,3 +68,5 @@
 - What could have gone better
    - **Starting earlier:** Starting the assignment earlier might have helped us have more time to develop our assurance cases.
    - **Assignment examples:** We felt like some more specific assurance case examples would have helped us better understand what we were supposed to do on this assignment sooner.
+- What we want to change moving forward
+   - Try to start the assignment sooner.
