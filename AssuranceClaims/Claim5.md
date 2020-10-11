@@ -5,5 +5,5 @@
 **Assessment:** The availablility of the required evidence:
 | Evidence  | Description          | Availability  |
 | --------- | -------------------- | ------------ |
-| *E1* - Elasticsearch restore stapshot API procedures | Required to prove C4 - Documentation needed to prove Elasticsearch restore snapshot API can restore snapshot of a cluster.  | **Pass** - [Restore a Snapshot](https://www.elastic.co/guide/en/elasticsearch/reference/current/snapshots-restore-snapshot.html) |
+| *E1* - Elasticsearch restore snapshot API procedures | Required to prove C4 - Documentation needed to prove Elasticsearch restore snapshot API can restore snapshot of a cluster.  | **Pass** - [Restore a Snapshot](https://www.elastic.co/guide/en/elasticsearch/reference/current/snapshots-restore-snapshot.html) |
 | *E2* - Logs of system activity | Required to prove C5 - Documentation needed to prove Elasticsearch logs all activity happening on the system  | **PASS** - [Logs Monitoring](https://www.elastic.co/guide/en/logs/guide/7.9/logs-overview.html) |
