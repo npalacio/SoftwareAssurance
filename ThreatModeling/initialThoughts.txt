@@ -1,0 +1,19 @@
+Our Scenarios from use/misuse cases:
+-employee logging in
+-employee viewing customer account info
+-employee updating customer account info
+-employee viewing logs on customer's account
+
+Our Assurance cases:
+-ES authentication feature
+-Information disclosed during ES communication
+    -includes node to node communication and cluster to client communication
+-audit/security logging
+-ES responding to user requests in timely fashion
+-ES snapshot and restore feature for disaster recovery
+
+Potential data flow diagrams for assignment:
+-web client sending HTTP request to view a customer's account information
+-web client sending HTTP request to update a customer's account information
+    -I think the difference between this one and just viewing a customer's account information would be this one could involve replicating the data update across nodes in the ES cluster. I think the nodes would be separate processes.
+-???
