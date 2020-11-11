@@ -1,0 +1,21 @@
+Attendance
+-Nick
+-Joseph
+-Austin
+-Ryan
+-Adrian
+
+Agenda
+-discuss assignment
+
+Notes
+-data flow diagrams
+    -web client getting authenticated - Adrian
+        -client passes credentials to ES
+    -web client fetching customer account information - Ryan
+        -ES represented as single process
+    -web client updating customer account information - Nick
+        -ES represented as one process per node, can show the replication happening with the update
+        -would want to show each node's data store for replication
+    -web client sending any request, show logging in ES - Joseph
+-Austin will write up part 2 of the assignment
