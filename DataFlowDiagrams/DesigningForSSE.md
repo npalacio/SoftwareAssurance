@@ -7,6 +7,7 @@
 ![Use Case 5](./DFD-CustomerAccountUpdate.png)
 
 ### [Full HTML Report](./DFD-CustomerAccountUpdate.htm)
+### [PDF Version](./DFD-CustomerAccountUpdate.pdf)
 
 # Part 2
 ## DFD Threat Analysis
