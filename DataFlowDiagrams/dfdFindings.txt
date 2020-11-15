@@ -1,0 +1,15 @@
+Threats that ES handles well:
+-encrypting communcations
+    -ES can be configured to use TLS/SSL for communication between nodes in a cluster and between a client and the cluster. This mitigated several threats related to tampering.
+-authenticating clients to the cluster
+    -ES can be configured to authenticate clients which mitigates several spoofing threats.
+
+Gaps in ES security from DFD:
+-cluster/node security
+    -ES adds nodes to a cluster using a config file with a list of IP addresses where the other nodes live (https://www.elastic.co/guide/en/elasticsearch/reference/current/important-settings.html#unicast.hosts). There is then a module that handles discovering other nodes in the cluster using this list and its own cluster name setting. If this list were compromised on one node the whole cluster could be compromised by a potentially malicious node being added.
+-securing log files
+    -Could not find any documentation on how ES ensures the integrity of its log files.
+-Changing ES execution flow via API requests
+    -Unsure if there are ways to send in API requests to an ES cluster that change code execution flow in such a way to elevate the privilege of a user.
+-Handling issues with replication in a cluster
+    -Could not find any documentation around what happens when a primary node tries and fails to communicate with a replica node in order to propagate a data change to a replica shard.
