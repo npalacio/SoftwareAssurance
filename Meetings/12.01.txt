@@ -1,0 +1,31 @@
+Attendance:
+-Nick
+-Joseph
+-Ryan
+-Adrian
+-Austin
+
+Notes:
+-closed issues/tasks from last assignment
+-created new board for current assignment
+-discuss code analysis assignment
+    -strategy: scenario based, risk based
+        -dont necessarily have to find flaws
+        -want to focus efforts on 2 areas
+        -2 people focusing on each area to ensure good coverage and collaboration
+    -Joseph will try to setup automated scanning tool
+    -areas to look at
+        -node discovery
+            -Nick - can write up part 1 after working with Adrian on findings
+            -Adrian
+        -authentication
+            -Ryan - can write up part 1
+            -Austin
+    -look at:
+        -good stuff
+        -bad stuff
+        -relate findings back to previous assignments
+        -compare/contrast documentation to code
+        -potential contributions to project
+        -relate finding to CWEs
+-Nick will stub out final MD doc that everyone can upload
