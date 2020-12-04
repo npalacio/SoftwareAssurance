@@ -10,14 +10,21 @@ Informed by the results of our automated scans and our currated lists of applica
 
 ### Node Discovery
 In order to review the parts of elasticsearch that handle discovering other nodes in a cluster we selected the following 5 CWEs to search this part of the code for:
-- CWE-117: Improper output neutralization for Logs
-   - This CWE was selected for manual review because it showed up in our automated scan as a potential security weakness. After manual inspection we found that in the TransportService.java on line 882 there is a method that validates a given string representing an action name. If this string is determined to be invalid a message is logged that includes the invalid action name. This could be a vulnerability because an attacker could be able to get any invalid action name logged which could compromise the log file.
-- CWE-306: Missing Authentication for Critical Function
+- [CWE-117](https://cwe.mitre.org/data/definitions/117.html): **Improper output neutralization for Logs**
+   - This CWE was selected for manual review because it showed up in our automated scan as a potential security weakness.
+   - After manual inspection we found that in the TransportService.java on line 882 there is a method that validates a given string representing an action name. If this string is determined to be invalid a message is logged that includes the invalid action name. This could be a vulnerability because an attacker could be able to get any invalid action name logged which could compromise the log file.
+- [CWE-306](https://cwe.mitre.org/data/definitions/306.html): **Missing Authentication for Critical Function**
    - This CWE was selected for manual review because our data flow diagram revealed that there might be a security weakness with the way Elasticsearch finds new nodes for a cluster.
-- CWE-522: Insufficiently Protected Credentials
-- CWE-366: Race condition within a thread
-- CWE-567: Unsynchronized Access to Shared Data in a Multithreaded Context
-
+   - After manual inspection we found that in PeerFinder.java on line 311 there is a method that probes an IP address to find other nodes in the cluster without any validation on that IP address creating a vulnerability that an attacker might be able to exploit in order to add a rogue node.
+- [CWE-522](https://cwe.mitre.org/data/definitions/522.html): **Insufficiently Protected Credentials**
+   - This CWE was selected for manual review because our data flow diagram revealed that there might be a security weakness with the way Elasticsearch finds new nodes for a cluster and insufficiently protecting credentials for another node is one of the ways this weakness might manifest itself.
+   - After manual inspection we did not find any reason to believe this weakness existed in the Elasticsearch codebase.
+- [CWE-366](https://cwe.mitre.org/data/definitions/366.html): **Race condition within a thread**
+   - This CWE was selected for manual review because Elasticsearch runs with multiple threads going at once which means a race condition could occur if the threads are not managed properly.
+   - After manual review we did not find any instances of a potential race condition occuring in the node discovery code. In fact, we found many good uses of a mutex to put locks on shared resources in order to avoid race conditions.
+- [CWE-567](https://cwe.mitre.org/data/definitions/567.html): **Unsynchronized Access to Shared Data in a Multithreaded Context**
+   - This CWE was selected for manual review because Elasticsearch runs with multiple threads going at once which means improper access of shared data could occur if the threads are not managed properly.
+   - After manual review we did not find any instances of unsynchronized access to shared data. In fact, we found many good uses of a mutex to put locks on shared resources in order to prevent unsychronized access to them.
 ### Authentication
 
 # Key Findings and Contributions
