@@ -9,6 +9,14 @@ We originally intended to use [PMD](https://pmd.github.io) to scan the codebase,
 Informed by the results of our automated scans and our currated lists of applicable CWE's, we manually evaluated two critical areas in Elasticsearch:
 
 ### Node Discovery
+In order to review the parts of elasticsearch that handle discovering other nodes in a cluster we selected the following 5 CWEs to search this part of the code for:
+- CWE-117: Improper output neutralization for Logs
+   - This CWE was selected for manual review because it showed up in our automated scan as a potential security weakness. After manual inspection we found that in the TransportService.java on line 882 there is a method that validates a given string representing an action name. If this string is determined to be invalid a message is logged that includes the invalid action name. This could be a vulnerability because an attacker could be able to get any invalid action name logged which could compromise the log file.
+- CWE-306: Missing Authentication for Critical Function
+   - This CWE was selected for manual review because our data flow diagram revealed that there might be a security weakness with the way Elasticsearch finds new nodes for a cluster.
+- CWE-522: Insufficiently Protected Credentials
+- CWE-366: Race condition within a thread
+- CWE-567: Unsynchronized Access to Shared Data in a Multithreaded Context
 
 ### Authentication
 
