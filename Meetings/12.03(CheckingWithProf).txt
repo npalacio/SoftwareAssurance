@@ -1,0 +1,9 @@
+-start with CWEs, then look for these in manual code review
+    -helps provide checklist
+    -could start with top 10 relevant ones, then you can report on findings in that context
+        -allows for closure if you do not find any issues
+-do not let automated scan drive the manual code review
+-recommended spot bugs automated scanning tool for java
+
+Takeaways:
+-Adrian/Nick and Ryan/Austin should pick 5-10 relevant CWEs that they can report on for the manual code review part of the assignment. This should provide better direction for the assignment.
