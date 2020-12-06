@@ -35,7 +35,7 @@ In this section in order to validate the effectiveness of the authentication fun
    - Spoofing is another common misuse of software systems, so it felt important to include this CWE in this section.
    - After manual review, we found that it is possible to enable IP filtering but it only allows for blacklisting certain addresses, so spoofing could be an issue in elasticsearch. There is also the potential vulnerabilities of spoofing what device you are accessing with.
 - [CWE-294](https://cwe.mitre.org/data/definitions/294.html): **Authentication Bypass by Capture-replay**
-   - Capturing information is danger of an information storage software, so finding vulnerabilities here is important.
+   - Capturing information is a danger of an information storage software, so finding vulnerabilities here is important.
    - After manual review, elasticsearch does not allow for data sniffing except under specific circumstances, enabling on specific nodes. This appears to not be an issue.
 - [CWE-307](https://cwe.mitre.org/data/definitions/307.html): **Improper Restriction of Excessive Authentication Attempts**
    - Brute force authentication is also another common misuse practice and so it made this list of potential vulnerabilities.
