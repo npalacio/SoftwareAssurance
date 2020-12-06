@@ -25,7 +25,24 @@ In order to review the parts of elasticsearch that handle discovering other node
 - [CWE-567](https://cwe.mitre.org/data/definitions/567.html): **Unsynchronized Access to Shared Data in a Multithreaded Context**
    - This CWE was selected for manual review because Elasticsearch runs with multiple threads going at once which means improper access of shared data could occur if the threads are not managed properly.
    - After manual review we did not find any instances of unsynchronized access to shared data. In fact, we found many good uses of a mutex to put locks on shared resources in order to prevent unsychronized access to them.
+
 ### Authentication
+In this section in order to validate the effectiveness of the authentication functions of elasticsearch, we found 5 CWE's and looked for issues in the codebase:
+- [CWE-287](https://cwe.mitre.org/data/definitions/287.html): **Improper Authentication**
+   - We selected this CWE as it is one of the main potential issues with authentication in a software system like elasticsearch.
+   - After manual review, it seems the basic authentication feature is secure at creating and authorizing unique user credentials within nodes.
+- [CWE-290](https://cwe.mitre.org/data/definitions/290.html): **Authentication Bypass by Spoofing**
+   - Spoofing is another common misuse of software systems, so it felt important to include this CWE in this section.
+   - After manual review, we found that it is possible to enable IP filtering but it only allows for blacklisting certain addresses, so spoofing could be an issue in elasticsearch. There is also the potential vulnerabilities of spoofing what device you are accessing with.
+- [CWE-294](https://cwe.mitre.org/data/definitions/294.html): **Authentication Bypass by Capture-replay**
+   - Capturing information is danger of an information storage software, so finding vulnerabilities here is important.
+   - After manual review, elasticsearch does not allow for data sniffing except under specific circumstances, enabling on specific nodes. This appears to not be an issue.
+- [CWE-307](https://cwe.mitre.org/data/definitions/307.html): **Improper Restriction of Excessive Authentication Attempts**
+   - Brute force authentication is also another common misuse practice and so it made this list of potential vulnerabilities.
+   - After manual review, it seems like elasticsearch allows for multiple authentication attempts, but elasticsearch has audit logging features that can be enabled to track failed attempts. This would be a slight vulnerability.
+- [CWE-603](https://cwe.mitre.org/data/definitions/603.html): **Use of Client-Side Authentication**
+   - Being able to avoid authentication by modifying the client is a potential vulnerability and was worth adding to our list of CWE's.
+   - After manual review, elasticsearch allows you to disable client-side authentication, meaning this is not an issue.
 
 # Key Findings and Contributions
 ## Key Findings
