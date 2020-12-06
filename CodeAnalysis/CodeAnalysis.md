@@ -3,7 +3,7 @@
 Our code review strategy was to follow a scenario based and risk based hybrid approach. Some challenges we were up against included the fact that the Elasticsearch codebase is quite large so trying to analyze everything is not realistic. Another challenge was that most of our team does not have a lot of experience working in large Java projects/repositories. In order to address these challenges we decided to focus our efforts on very specific areas of the Elasticsearch codebase. Specifically, we decided to focus on the **node discovery** and **authentication** parts of Elasticsearch. These areas were deemed high risk based on our findings from scenarios in previous assignments.
 
 ## Phase 1 - Automated Scanning
-We originally intended to use [PMD](https://pmd.github.io) to scan the codebase, but we were not able to find quality rulesets. Instead we used [SpotBugs](https://spotbugs.github.io/) with the [Find Security Bugs plugin](https://find-sec-bugs.github.io). This plugin advertised both OWASP TOP 10 and CWE coverage, and the [final report](SpotBugsReport.html) contains useful links to these resources for each finding.
+We originally intended to use [PMD](https://pmd.github.io) to scan the codebase, but we were not able to find quality rulesets. Instead we used [SpotBugs](https://spotbugs.github.io/) with the [Find Security Bugs plugin](https://find-sec-bugs.github.io). This plugin advertised both OWASP TOP 10 and CWE coverage, and the [final report](SpotBugsReport.pdf) contains useful links to these resources for each finding.
  
 ## Phase 2 - Manual Reviews
 Informed by the results of our automated scans and our currated lists of applicable CWE's, we manually evaluated two critical areas in Elasticsearch:
@@ -53,3 +53,20 @@ The table below outlines those CWE's of particular concern and the results of fu
 | [CWE-78](https://cwe.mitre.org/data/definitions/78.html)/[OWASP Top 10 - Injection](https://owasp.org/www-project-top-ten/2017/A1_2017-Injection) | Found by SpotBugs in several places in Elasticsearch's startup code: [org.elasticsearch.bootstrap.Spawner.java](https://github.com/elastic/elasticsearch/blob/v7.10.0/server/src/main/java/org/elasticsearch/bootstrap/Spawner.java). | The code in that class is used to execute native commands to start up Elasticsearch's modules (by searching for Jar files in a particular directory). External user input is not used in these spots, so command injection is not a risk. However, if a physical machine is compromised, there is a slight risk that a malicious actor could place their own Jar file in the modules directory and Elasticsearch would run it with its own priviledges. | **LOW** |
 | [CWE-117 Improper output neutralization for Logs](https://cwe.mitre.org/data/definitions/117.html) | Found by manual inspection in [org.elasticsearch.transport.TransportService.java:line 882](https://github.com/elastic/elasticsearch/blob/v7.10.0/server/src/main/java/org/elasticsearch/transport/TransportService.java#L882)| There is a method that validates a given string representing an action name. If this string is determined to be invalid a message is logged that includes the invalid action name. This could be a vulnerability because an attacker could be able to get any invalid action name logged which could compromise the log file.| **MEDIUM** |
 | [CWE-306 Missing Authentication for Critical Function](https://cwe.mitre.org/data/definitions/306.html) | Found by manual inspection in [org.elasticsearch.discovery.PeerFinder.java:line 311](https://github.com/elastic/elasticsearch/blob/v7.10.0/server/src/main/java/org/elasticsearch/discovery/PeerFinder.java#L311)| There is a method that probes an IP address to find other nodes in the cluster without any validation on that IP address creating a vulnerability that an attacker might be able to exploit in order to add a rogue node.| **HIGH** |
+
+## Contributions
+Our team does not currently plan on submitting any contributions to the Elasticsearch project. We decided that we would need to spend more time with the Elasticsearch codebase in order to truly validate some of our security findings before we would feel comfortable submitting anything to the project. Elasticsearch has a massive codebase and our strategy of focusing on specific parts of it means that we lack a lot of context around the codebase as a whole.
+
+## Team Reflection
+- **What went well**
+   - Everyone on the team contributing
+   - Meeting the professor gave us some good advice on starting with CWEs to report on for our manual code review
+   - Joseph on our team getting the automated scan setup also helped guide our manual code review to potential issues
+   - Working in 2 pairs for the manual code review part of the assignment helped to focus on quality and depth of review rather than trying to cover more ground in the codebase which would not have been realistic
+- **What could have gone better**
+   - Team (mostly) lacking experience in Java. Only 1 member of our team has experience working in a large Java codebase which made our manual code review difficult.
+   - We struggled early on in the assignment understanding what exactly we should do for the code review. The meeting with the professor helped provide direction.
+- **What we plan to change**
+   - N/A, continue to work as a team
+
+## [Project Board](https://github.com/npalacio/SoftwareAssurance/projects/5)
