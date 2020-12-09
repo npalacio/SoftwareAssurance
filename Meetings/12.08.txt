@@ -1,0 +1,17 @@
+Attendance:
+-Nick
+-Joseph
+-Adrian
+-Ryan
+-Austin
+
+Agenda:
+-discuss presentation
+-Nick, Austin free after 3:30
+-Friday at 4, otherwise Friday at 6
+-Divide up presentation
+    -description: Adrian
+    -Assurance claims: Ryan
+    -gaps: Nick
+    -Findings: Austin
+    -contributions: Joseph
